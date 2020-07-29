@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=300, initial-scale=1" name="viewport">
+<title>DriveToWeb - Host websites on Google Drive and Microsoft OneDrive</title>
+<meta name="copyright" content="Copyright (c) 2018. All Rights Reserved." />
+<meta name="description" content="Host websites on Google Drive and Microsoft OneDrive" />
+<meta name="keywords" content="web site, free hosting, google drive, hosting, onedrive, serverless" />
+<link rel="stylesheet" type="text/css" href="/inc/wd.css">
+<link rel="stylesheet" type="text/css" href="/inc/wd-s.css" media="screen and (max-width: 580px)">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <h1 class="title">DriveToWeb</h1>
+        <p class="headline">Serverless Web Hosting</p>
+        <div class="loginBox">
+            <i class="material-icons headIcon">&#xE2C0;</i>
+            <p><span id="nreq">Millions</span> requests served</p>
+            <div class="field"><input type="button" id="gd" value="Host on Google Drive" onclick="doSignin('gd')"></input></div>
+            <div class="field"><input type="button" id="od" value="Host on Microsoft OneDrive" onclick="doSignin('od')"></input></div>
+            <p class="fineprint">By signing in, you agree with the <a href="/tos.html" target="_blank">Terms</a>.</p>
+        </div>
+        <p class="what">DriveToWeb lets you host web sites using free cloud storage. No need to buy or rent a server anymore.
+            <a href="#how" onclick="showHow()">How?</a></p>
+        <div class="how"><a id="how" name="how"></a>
+        <p>DriveToWeb liberates content creation by enabling anyone to quickly 
+            spin up a website using files stored on popular cloud drives, such 
+            as Google Drive and Microsoft OneDrive (including OneDrive for Business). 
+            Enterpreneurs, developers, educators and students all over the world 
+            have found great advantages using DriveToWeb over conventional web 
+            hosting services. Publishing becomes a simple 3-step process:</p>
+        <ol>
+            <li>Upload your website folder to Google Drive or OneDrive;</li>
+            <li>Share that folder for public access;</li>
+            <li>Sign-in above and obtain links to your content.</li>
+        </ol>
+        <p>If you like the service, we would ask for your kind <a href="https://PayPal.Me/WWWDrive" 
+            target="_blank">donation</a> securely accepted through PayPal. Thank you in 
+            advance for your support.</p>
+        </div>
+    </div>
+    <div id="footnotes">
+        <div class="left">
+            <a href="/tos.html" target="_blank">Terms</a>
+            <a href="/privacy.html" target="_blank">Privacy</a>
+            <a href="https://twitter.com/drv_tw" target="_blank">Twitter</a>
+            <a href="mailto:drvtw@outlook.com">Email</a>
+            <a href="https://docs-of.drv.tw" target="_blank">Docs</a>
+            <a href="https://PayPal.Me/WWWDrive" title="Donate via PayPal. Your support is greatly appreciated!" 
+                class="highlight" target="_blank">Support us</a>
+        </div>
+        <div class="right">
+            <div id="google_translate_element"></div>
+        </div>
+    </div>
+<script>
+function showHow() {
+    var how = document.querySelector( '.how' ) ;
+    if( how )
+        how.style.height = ( 'auto' == how.style.height ? '0px' : 'auto' ) ;
+}
+function doSignin( drive ) {
+    if( 'gd' == drive )
+        window.location = 'https://drv.tw/~/' + drive + '/?a=admin' ;
+    else
+        window.location = 'https://drv.tw/~/' + drive + '/?a=admin' ;
+}
+</script>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+        {
+            pageLanguage: 'en', 
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE, 
+            gaTrack: true, 
+            gaId: 'UA-85417367-1'
+        }, 'google_translate_element');
+}
+</script>
+<script>
+var ft=function(){var nreq = Math.floor( ( new Date().getTime() / 1000 - 1505769480 ) * 11.786 ) ;
+document.getElementById('nreq').innerHTML=nreq.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',' ) ;};
+document.addEventListener("DOMContentLoaded", function(e){ft();setInterval(ft,1000);});
+</script>
+<script async src="inc/wd.js"></script>
+<script type="text/javascript" async src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
